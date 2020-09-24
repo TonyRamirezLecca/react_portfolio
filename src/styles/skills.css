@@ -1,0 +1,94 @@
+.skillsContainers {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	align-items: center;
+	max-width: 1300px;
+	width: 80vw;
+	margin: 0 auto;
+	padding: 100px 0;
+	height: 400px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	border-radius: 20px;
+	box-shadow: 0px 4px 8px #111;
+	z-index: 2;
+	transition: opacity 1000ms;
+	opacity: 0;
+}
+.skills-fade-in {
+	opacity: 1;
+}
+.skillsContainersBackground {
+	border-radius: 20px;
+	position: absolute;
+	margin-left: 0px !important;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgb(50, 50, 50, .8);
+}
+.skillsTitle {
+	max-width: 100%;
+	display: flex;
+	position: relative;
+	z-index: 3;
+}
+.skillsWrapperHalfBackground {
+	z-index: 1;
+}
+.skillsTitle h6 {
+	width: 100%;
+	font-size: 50px;
+	font-family: 'Raleway', sans-serif;
+/*	color: #39a1ad; */
+	color: #fff;
+	text-align: center;
+}
+.skillsContainers div {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0px 20px;
+}
+.skillsImgCtn {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0px 20px;
+	max-width: 1000px;
+}
+.skillsContainers div img {
+	max-width: 80%;
+	height: 55px;
+	object-fit: contain;
+	position: relative;
+	z-index: 3;
+}
+
+.skillsDescription {
+	color: #fff;
+	max-width: 800px;
+	width: 80%;
+	line-height: 30px;
+	font-weight: 100;
+	font-size: 22px;
+	text-align: center;
+	position: relative;
+	z-index: 3;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+@media screen and (max-width: 450px) {
+	.skillsTitle h6{
+		font-size: 40px;
+	}
+	.skillsDescription {
+		font-size: 18px;
+	}
+}

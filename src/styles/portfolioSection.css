@@ -1,0 +1,204 @@
+.portfolioSectionContainer {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 5px #111;
+      border-radius: 10px;
+      transition: all 200ms;
+      background: #4a4644;
+      transition: all 300ms;
+  }
+  .portfolioSectionContainer:hover {
+    box-shadow: 2px 5px 5px #111;
+      transform: translate(0px,-2px) scale(1.009);
+  }
+  .portfolioSectionContainer:hover .portfolioHeader{
+    background: #40a7b3;
+      color: #fff;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+  }
+  
+  .portfolioHeader {
+      cursor: pointer;
+    font-family: "Josefin Sans", sans-serif;
+    color: #fff;
+      font-weight: 100;
+    padding: 5px 0;
+    font-weight: 300;
+    letter-spacing: 4px;
+    width: 100%;
+      height: 40px;
+      max-height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    text-align: center;
+    font-size: .9em;
+  }
+  .portfolioImgContainer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+    cursor: pointer;
+      height: 100%;
+      padding: 6px;
+      border-radius: 9px;
+  }
+  .portfolioImg {
+    max-width: 300px;
+      width: 100%;
+    max-height: 250px;
+    height: 100%;
+      border-radius: 5px;
+  }
+  .portfolioImgLinks {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: all 300ms;
+  }
+  .portfolioImgLinks a {
+    padding: 10px;
+    color: #1b2a37;
+    font-weight: 300;
+    font-size: 1.2em;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .portfolioLinksVisible {
+    display: flex;
+    background: rgb(250, 250, 250, 0.9);
+    animation: fadeInPortfolioLinks 500ms forwards;
+    cursor: default;
+  }
+  .portfolioSectionPopup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+      max-width: 800px;
+      height: 500px;
+    max-height: 80vh;
+      display: none;
+    z-index: 99999;
+  }
+  
+  /*PopUp*/
+  .portfolioPopupContent {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    max-width: 700px;
+    height: 600px;
+    max-height: 80vh;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+      flex-direction: column;
+    background: #fff;
+      box-shadow: 2px 3px 10px #333;
+      border-radius: 2px;
+  }
+  .portfolioPopupBackground {
+    height: 100vh;
+    background: rgb(50, 50, 50, .5);
+    width: 100vw;
+    position: absolute;
+  }
+  .portfolioSectionPopup.portfolioShowPopup {
+      display: flex !important;
+  }
+  .portfolioPopupImgCtn {
+      flex: 4;
+      overflow: hidden;
+      border-bottom: 9px solid #158e9c;
+      width: 100%;
+  }
+  .portfolioPopupImgCtn img {
+      object-fit: cover;
+      max-width: 100%;
+  }
+  .portfolioPopupTextCtn {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      padding: 10px 40px ;
+  }
+  .portfolioPopupContent h6 {
+      height: 30px;
+      width: 100%;
+      top: 0;
+      right: 0;
+      display: flex;
+      font-size: 26px;
+      font-weight: 800;
+      padding: 20px 0;
+      cursor: default;
+      margin-top: 0px;
+      border-bottom: 2px solid #ddd;
+      font-family: 'Raleway', sans-serif;
+  }
+  .portfolioPopupDescription {
+      flex: 1;
+      padding: 20px 0;
+      font-family: 'Raleway', sans-serif;
+  }
+  .portfolioPopupClose {
+      cursor: pointer;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      font-size: 12px;
+      color: #fff;
+      padding: 3px 5px;
+      background: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;;
+  }
+  .portfolioPopupClose:hover {
+      background: #444;
+  }
+  .portfolioPopupLinks {
+      width: 260px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+  }
+  .portfolioPopupLinks a {
+      text-decoration: none;
+      padding: 5px 15px;
+      border-radius: 5px;
+      font-weight: 100;
+  }
+  .portfolioPopupLinks a:nth-child(1) {
+      background: #fff;;
+      color: #158e9c;
+      border: solid 1px #aaa;
+  }
+  .portfolioPopupLinks a:nth-child(2) {
+      color: #888;
+      border: solid 1px #aaa;
+  }
+  
+  
+  @keyframes fadeInPortfolioLinks {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 100%;
+    }
+  }
+  

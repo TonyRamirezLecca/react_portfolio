@@ -1,0 +1,169 @@
+.navbar {
+    position: absolute;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+      right: 80px;
+  }
+  .menuButton {
+    cursor: pointer;
+    color: #ccc;
+    font-size: 40px;
+      font-weight: 800;
+    animation: slideInMenuButton 4000ms forwards;
+      position: relative;
+      z-index: 9998;
+  }
+  .menuButton p {
+      height:  30px;
+  }
+  .menuButton:hover {
+    color: white;
+  }
+  @keyframes slideInMenuButton {
+    0% {
+      transform: translate(-50vw, -40%);
+    }
+    100% {
+      transform: translate(0, -80%)
+    }
+  }
+
+  
+  .menu {
+    background: rgb(29, 29, 29, 1);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all 200ms;
+  }
+  .menuVisible {
+    display: flex !important;
+      top: 0;
+      left: 0;
+      position: fixed;
+    animation: slideMenuDown 200ms forwards;
+  }
+  @keyframes slideMenuDown {
+    0% {
+      transform: translateY(-100vh);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .menuLinks {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .menuNavigationLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menuLinkedInGithubLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .menuLinkedInGithubLinks a {
+    padding: 5px 10px;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+  .menuLinkedInGithubLinks a:hover {
+    background: #494949;
+  }
+  .menuLinkedInGithubLinks a:nth-child(3) {
+    transform: translateY(-100vh);
+    animation: linksDropIn 1000ms forwards;
+    animation-delay: 200ms;
+  }
+  .menuLinkedInGithubLinks a:nth-child(2) {
+    transform: translateY(-100vh);
+    animation: linksDropIn 1000ms forwards;
+    animation-delay: 300ms;
+  }
+  .menuLinkedInGithubLinks a:nth-child(1) {
+    transform: translateY(-100vh);
+    animation: linksDropIn 1000ms forwards;
+    animation-delay: 400ms;
+  }
+  .menuBrand h1 {
+    padding: 5px 10px;
+    margin: 10px;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 10px;
+  }
+  
+  .menuBrand {
+    transform: translateY(-100vh);
+    animation: linksDropIn 1000ms forwards;
+    animation-delay: 600ms;
+  }
+  
+  .slidingMenu a {
+    text-decoration: none;
+    color: white;
+    font-size: 2em;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+  }
+  @media screen and (max-width: 600px) {
+    .slidingMenu a {
+      font-size: 1.5em;
+    }
+  }
+  
+  .slidingMenu:nth-child(1) {
+    animation: menuSlideIn 1000ms forwards;
+    animation-delay: 200ms;
+    opacity: 0;
+  }
+  .slidingMenu:nth-child(2) {
+    animation: menuSlideIn 1000ms forwards;
+    animation-delay: 300ms;
+    opacity: 0;
+  }
+  .slidingMenu:nth-child(3) {
+    animation: menuSlideIn 1000ms forwards;
+    animation-delay: 400ms;
+    opacity: 0;
+  }
+  
+  @keyframes menuSlideIn {
+    0% {
+      opacity: 0;
+      transform: translatex(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translatex(0%);
+    }
+  }
+  @keyframes linksDropIn {
+    0% {
+      opacity: 0.5;
+      transform: translateY(-100vh);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

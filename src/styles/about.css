@@ -1,0 +1,72 @@
+#contactContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 50vh;
+  }
+  #contactContainer h1 {
+    margin: 0 auto;
+    margin-top: 30px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    font-size: 2em;
+  }
+  #contactSubContainer {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    padding: 10px;
+    max-width: 1800px;
+  }
+  #aboutText {
+    flex: 1;
+    min-width: 260px;
+    margin: 20px auto;
+      max-width: 1200px;
+      padding: 0 30px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #aboutText h3 {
+    font-size: 3em;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 15px;
+  font-family: 'Raleway', sans-serif;
+  }
+  #aboutText p {
+    line-height: 1.7em;
+    padding: 0px;
+    font-size: 1.2em;
+  font-family: 'Raleway', sans-serif;
+  }
+  #aboutText p span {
+      font-style: italic;
+      color: #39a1ad;
+      margin-left: 5px;
+  }
+  #aboutTitleInner {
+    display: block;
+    font-size: 3em;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  #aboutTitleOuter {
+    display: none;
+    font-size: 3em;
+    text-align: center;
+    width: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    #aboutText p {
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+    #aboutTitleOuter {
+      display: block;
+    }
+  }
